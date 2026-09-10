@@ -24,7 +24,7 @@ const getPyodidePromise = (() => {
          .then(() => pyodide.pyimport("micropip"))
          .then(micropip => { 
             console.log("micropip is ready");
-            return micropip.install("schemdraw")
+            return micropip.install(["schemdraw", "scikit-learn"])
          })
          .then(() => res(pyodide));
        }
